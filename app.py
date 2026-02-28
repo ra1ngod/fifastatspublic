@@ -7,12 +7,8 @@ import numpy as np
 import streamlit as st
 
 # --- Config ---
-SUPABASE_URL = "https://izsolcawlvpidwnhrxer.supabase.co"
-SUPABASE_KEY = (
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6"
-    "Iml6c29sY2F3bHZwaWR3bmhyeGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIwNjk3ODk"
-    "sImV4cCI6MjA2NzY0NTc4OX0.7w02SBg3KRm4yf3ftVte-yT59r3hcWdHO6uosIUQBao"
-)
+SUPABASE_URL = st.secrets["SUPABASE_URL"]                 
+SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 HEADERS = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
 CUTOFF = "2026-01-15"
 BASE_STAKE = 20
